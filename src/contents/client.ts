@@ -3,12 +3,6 @@ import { Network } from '@requestly/web-sdk'
 import { template } from 'lodash-es'
 import type { UpdateRuleData } from '~contents/message'
 
-export const config: PlasmoCSConfig = {
-  matches: ['<all_urls>'],
-  world: 'MAIN',
-  run_at: 'document_start',
-}
-
 window.addEventListener('message', (evt: MessageEvent<UpdateRuleData>) => {
   if (evt?.data?.action === 'rule-list:update') {
     Network.clearInterceptors()
@@ -30,3 +24,9 @@ window.addEventListener('message', (evt: MessageEvent<UpdateRuleData>) => {
     })
   }
 })
+
+export const config: PlasmoCSConfig = {
+  matches: ['<all_urls>'],
+  world: 'MAIN',
+  run_at: 'document_start',
+}
