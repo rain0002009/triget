@@ -20,7 +20,7 @@ async function init() {
   const data = await storage.get<RuleItem[]>(STORAGE_KEY)
   window.postMessage({
     action: 'rule-list:update',
-    payload: data.filter(filterRule),
+    payload: data?.filter(filterRule),
   }, '*')
 }
 

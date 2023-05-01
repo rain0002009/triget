@@ -1,5 +1,5 @@
 import type { PlasmoCSConfig } from 'plasmo'
-import { Network } from '@requestly/web-sdk'
+import { Network } from '@requestly/web-sdk/src/modules/network'
 import { template } from 'lodash-es'
 import type { UpdateRuleData } from '~contents/message'
 

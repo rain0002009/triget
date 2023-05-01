@@ -14,8 +14,8 @@ dependencies:
     specifier: ^1.5.0
     version: 1.5.0(react@18.2.0)
   '@requestly/web-sdk':
-    specifier: ^0.12.1
-    version: 0.12.1
+    specifier: github:requestly/requestly-web-sdk
+    version: github.com/requestly/requestly-web-sdk/f5cbb3caeee76b63ee688a2ad5fcf7a40bb6d92f
   ahooks:
     specifier: ^3.7.6
     version: 3.7.6(react@18.2.0)
@@ -2530,13 +2530,6 @@ packages:
       rc-util: 5.30.0(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-    dev: false
-
-  /@requestly/web-sdk@0.12.1:
-    resolution: {integrity: sha512-0H7uzyStbix/wo7on4bDRt/kcCOzYZq7rWRuSaX7Ae5cRsJwx+EA1+atrRI7m89jtPhdiiJpEl9dCMHnXIOgIg==}
-    dependencies:
-      bowser: 2.11.0
-      rrweb: 2.0.0-alpha.8
     dev: false
 
   /@rrweb/types@2.0.0-alpha.8:
@@ -8194,4 +8187,15 @@ packages:
       archiver-utils: 2.1.0
       compress-commons: 4.1.1
       readable-stream: 3.6.2
+    dev: false
+
+  github.com/requestly/requestly-web-sdk/f5cbb3caeee76b63ee688a2ad5fcf7a40bb6d92f:
+    resolution: {tarball: https://codeload.github.com/requestly/requestly-web-sdk/tar.gz/f5cbb3caeee76b63ee688a2ad5fcf7a40bb6d92f}
+    name: '@requestly/web-sdk'
+    version: 0.12.1
+    prepare: true
+    requiresBuild: true
+    dependencies:
+      bowser: 2.11.0
+      rrweb: 2.0.0-alpha.8
     dev: false
