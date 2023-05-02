@@ -3,25 +3,9 @@ import type { FC } from 'react'
 import { Button, Collapse, Form, Input, InputNumber, Select, Switch, Tabs } from 'antd'
 import { DeleteOutlined } from '@ant-design/icons'
 import { useMemoizedFn } from 'ahooks'
-import { Editor, loader } from '@monaco-editor/react'
-import JSONWorker from 'url:monaco-editor/esm/vs/language/json/json.worker.js'
-import TSWorker from 'url:monaco-editor/esm/vs/language/typescript/ts.worker.js'
-import EditorWorker from 'url:monaco-editor/esm/vs/editor/editor.worker.js'
-import * as monaco from 'monaco-editor'
 import { changeEnumToList } from '~/utils'
+import Editor from '~/components/Editor'
 
-self.MonacoEnvironment = {
-  getWorkerUrl(moduleId, label) {
-    if (label === 'json')
-      return JSONWorker
-
-    if (label === 'typescript' || label === 'javascript')
-      return TSWorker
-
-    return EditorWorker
-  },
-}
-loader.config({ monaco })
 const { Panel } = Collapse
 const { Item } = Form
 

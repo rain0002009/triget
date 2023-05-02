@@ -4,6 +4,7 @@ import { useStorage } from '@plasmohq/storage/dist/hook'
 import { filter, findIndex } from 'lodash-es'
 import { useMemoizedFn } from 'ahooks'
 import { OverlayScrollbarsComponent } from 'overlayscrollbars-react'
+import Empty from 'react:~/assets/want-empty.svg'
 import TopHeader from '~components/TopHeader'
 import 'antd/dist/reset.css'
 import './style.css'
@@ -31,6 +32,10 @@ const Popup: FC<Props> = (props) => {
     />
     <OverlayScrollbarsComponent className="flex-1">
       <div className="p-4 w-full space-y-4">
+        {!rules?.length && <div className='mt-[90px] text-center text-white'>
+            <Empty className='fill-current mx-auto' />
+            <p className='text-[20px] mt-4'>请添加规则</p>
+        </div>}
         {rules?.map((rule) => {
           return <Rule
             data={rule}
